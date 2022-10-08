@@ -8,6 +8,6 @@
 public struct TagListPage: Location {
     /// All of the tags used within the website.
     public var tags: Set<Tag>
-    public let path: Path
+    public var path: Path = Path("")
     public var content: Content
 }

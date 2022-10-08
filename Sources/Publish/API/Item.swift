@@ -19,7 +19,7 @@ public struct Item<Site: Website>: AnyItem, Hashable {
     /// this item is for.
     public var metadata: Site.ItemMetadata
     public var tags: [Tag]
-    public var path: Path { makeAbsolutePath() }
+    public var path: Path = Path("")
     public var content: Content
     public var rssProperties: ItemRSSProperties
 
@@ -39,6 +39,7 @@ public struct Item<Site: Website>: AnyItem, Hashable {
                 tags: [Tag] = [],
                 content: Content = Content(),
                 rssProperties: ItemRSSProperties = .init()) {
+        self.path = path
         self.relativePath = path
         self.sectionID = sectionID
         self.metadata = metadata

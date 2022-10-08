@@ -17,7 +17,7 @@ public struct Section<Site: Website>: Location {
     public private(set) var items = [Item<Site>]()
     /// The date of the last modified item within the section.
     public private(set) var lastItemModificationDate: Date?
-    public var path: Path { Path(id.rawValue) }
+    public var path: Path = Path("")
     public var content = Content()
 
     internal var allTags: AnySequence<Tag> { .init(itemIndexesByTag.keys) }
@@ -28,6 +28,7 @@ public struct Section<Site: Website>: Location {
     internal init(id: Site.SectionID) {
         self.id = id
         self.title = id.rawValue.capitalized
+        self.path = Path(self.id.rawValue)
     }
 }
 

@@ -13,6 +13,8 @@
     </a>
 </p>
 
+**Note** This is a fork of the original for use by Wayne Dixon.
+
 Welcome to **Publish**, a static site generator built specifically for Swift developers. It enables entire websites to be built using Swift, and supports themes, plugins and tons of other powerful customization options.
 
 Publish is used to build all of [swiftbysundell.com](https://swiftbysundell.com).

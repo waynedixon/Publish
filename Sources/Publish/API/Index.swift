@@ -8,6 +8,6 @@ import Foundation
 
 /// A representation of a website's main index page
 public struct Index: Location {
-    public var path: Path { "" }
+    public var path: Path = Path("")
     public var content = Content()
 }
