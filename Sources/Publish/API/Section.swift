@@ -14,7 +14,7 @@ public struct Section<Site: Website>: Location {
     /// The section's ID, as defined by its `Website` implementation.
     public let id: Site.SectionID
     /// The items contained within the section.
-    public private(set) var items = [Item<Site>]()
+    public var items = [Item<Site>]()
     /// The date of the last modified item within the section.
     public private(set) var lastItemModificationDate: Date?
     public var path: Path = Path("")
