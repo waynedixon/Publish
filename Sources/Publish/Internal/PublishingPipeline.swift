@@ -83,7 +83,7 @@ private extension PublishingPipeline {
     func setUpFolders(withExplicitRootPath path: Path?,
                       shouldEmptyOutputFolder: Bool) throws -> Folder.Group {
         let root = try resolveRootFolder(withExplicitPath: path)
-        let outputFolderName = "Output"
+        let outputFolderName = "html"
 
         if shouldEmptyOutputFolder {
             try? root.subfolder(named: outputFolderName).empty(includingHidden: true)
