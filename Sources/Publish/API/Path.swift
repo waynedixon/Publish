@@ -20,7 +20,7 @@ public extension Path {
     /// The default path used when generating RSS feeds.
     static var defaultForRSSFeed: Path { "feed.rss" }
     /// The default path used when generating HTML for tags and tag lists.
-    static var defaultForTagHTML: Path { "tags" }
+    static var defaultForTagHTML: Path { "tag" }
     /// The default path used for website favicon.
     static var defaultForFavicon: Path { "images/favicon.png" }
 
