@@ -21,7 +21,8 @@ extension PublishingPipeline {
 
         let folders = try setUpFolders(
             withExplicitRootPath: path,
-            shouldEmptyOutputFolder: stepKind == .generation
+            shouldEmptyOutputFolder: false
+            //shouldEmptyOutputFolder: stepKind == .generation
         )
 
         let steps = self.steps.flatMap { step in
