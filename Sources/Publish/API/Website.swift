@@ -11,7 +11,7 @@ import Dispatch
 /// Protocol that all `Website.SectionID` implementations must conform to.
 public protocol WebsiteSectionID: Decodable, Hashable, CaseIterable, RawRepresentable where RawValue == String {}
 /// Protocol that all `Website.ItemMetadata` implementations must conform to.
-public typealias WebsiteItemMetadata = Decodable & Hashable & Equatable
+public typealias WebsiteItemMetadata = Decodable & Hashable
 
 /// Protocol used to define a Publish-based website.
 /// You conform to this protocol using a custom type, which is then used to
