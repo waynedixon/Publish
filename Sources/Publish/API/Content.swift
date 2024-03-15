@@ -14,7 +14,7 @@ public struct Content: Hashable, ContentProtocol {
     }
     
     public func hash(into hasher: inout Hasher) {
-        return
+        return 
     }
     
     public var title: String
