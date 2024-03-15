@@ -9,6 +9,14 @@ import Plot
 
 /// Type representing a location's main content.
 public struct Content: Hashable, ContentProtocol {
+    public static func == (lhs: Content, rhs: Content) -> Bool {
+        return lhs.date == rhs.date && lhs.title == rhs.title
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        return
+    }
+    
     public var title: String
     public var description: String
     public var body: Body
@@ -17,6 +25,7 @@ public struct Content: Hashable, ContentProtocol {
     public var imagePath: Path?
     public var audio: Audio?
     public var video: Video?
+    public var metadata: (any WebsiteItemMetadata)?
 
     /// Initialize a new instance of this type
     /// - parameter title: The location's title.
